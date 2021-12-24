@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/primaryBackground"
+    tools:context=".NewTransactionOutcome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_outcomeTransactionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="New Transaction"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="28sp"
+            android:textColor="@color/primaryText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_income_menu">
+
+                <ImageButton
+                    android:id="@+id/ibtn_menuIncomeInactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_menuincome_inactive"
+                    android:backgroundTint="@color/primaryBackground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/ibtn_menuIncomeInactive"
+                    android:text="Income"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:textSize="22sp"
+                    android:textColor="@color/income"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_outcome_menu">
+
+                <ImageButton
+                    android:id="@+id/ibtn_menuOutcomeInactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_menuoutcome_active"
+                    android:backgroundTint="@color/primaryBackground"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/ibtn_menuOutcomeInactive"
+                    android:text="Outcome"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:textSize="22sp"
+                    android:textColor="@color/outcome"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Category"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"/>
+
+                <Spinner
+                    android:id="@+id/spn_categoryOutcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/primaryText"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Description"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"/>
+
+                <EditText
+                    android:id="@+id/et_descOutcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textCapSentences"
+                    android:hint="Place Your Description Here"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="22sp"
+                    android:textColor="@color/primaryText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Date"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"/>
+
+                <EditText
+                    android:id="@+id/et_dateOutcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:inputType="date"
+                    android:hint="yyyy-mm-dd"
+                    android:textColorHint="@color/secondaryText"
+                    android:textSize="22sp"
+                    android:textColor="@color/primaryText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Amount"
+                    android:fontFamily="@font/sfprodisplay_medium"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_amountOutcome"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:inputType="number"
+                        android:hint="0000"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="22sp"
+                        android:textColor="@color/primaryText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="IDR"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textSize="16sp"
+                        android:textColor="@color/tertiaryText"/>
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:text="Receipt"-->
+<!--                    android:fontFamily="@font/sfprodisplay_medium"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="@color/primaryText"/>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:background="@drawable/bg_choose_img"-->
+<!--                        android:src="@drawable/ic_get_image"/>-->
+
+<!--                    <Button-->
+<!--                        android:layout_width="170dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="20dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:gravity="center"-->
+<!--                        android:background="@drawable/bg_choose_image"-->
+<!--                        android:hint="Choose File"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:textColorHint="@color/primaryText"/>-->
+<!--                </LinearLayout>-->
+
+                <Button
+                    android:id="@+id/btn_saveOutcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bg_save_transaction"
+                    android:hint="Save Transaction"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sfprodisplay_bold"
+                    android:textColorHint="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_floating_menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btn_outcomeTransactionToMyWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:src="@drawable/ic_wallet_inactive"
+                    android:backgroundTint="@color/secondaryBackground"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:src="@drawable/ic_add_active"
+                    android:backgroundTint="@color/secondaryBackground"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/btn_outcomeTransactionToHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="30dp"
+                    android:src="@drawable/ic_history_inactive"
+                    android:backgroundTint="@color/secondaryBackground"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

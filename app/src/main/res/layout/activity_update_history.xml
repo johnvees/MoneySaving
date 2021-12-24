@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackground"
+    tools:context=".DetailHistory">
+
+    <LinearLayout
+        android:id="@+id/ll_parentDetailHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tv_idUpdateData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="id"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="20sp"
+            android:textColor="@color/primaryText"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_updateDataTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Detail Title"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="28sp"
+                android:textColor="@color/primaryText"/>
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_updateDataToDetailHistory"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:src="@drawable/ic_back"-->
+<!--                android:backgroundTint="@color/primaryBackground"/>-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_descUpdateData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Description"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="22sp"
+            android:textColor="@color/secondaryText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_amountUpdateData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="42sp"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="IDR"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="18sp"
+                android:textColor="@color/tertiaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details Below"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_chevron"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_detail_history"
+        android:layout_below="@id/ll_parentDetailHistory">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="22sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/primaryText"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Category"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textColor="@color/secondaryText"/>
+
+                    <Spinner
+                        android:id="@+id/spn_categoryUpdateDataBelow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/primaryText"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Description"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textColor="@color/secondaryText"/>
+
+                    <EditText
+                        android:id="@+id/et_descUpdateDataBelow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:inputType="textCapSentences"
+                        android:hint="Place Your Description Here"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="22sp"
+                        android:textColor="@color/primaryText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Date"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textColor="@color/secondaryText"/>
+
+                    <EditText
+                        android:id="@+id/et_dateUpdateDataBelow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:inputType="date"
+                        android:hint="yyyy-mm-dd"
+                        android:textColorHint="@color/secondaryText"
+                        android:textSize="22sp"
+                        android:textColor="@color/primaryText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Amount"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textColor="@color/secondaryText"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_amountUpdateDataBelow"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:inputType="number"
+                            android:hint="0000"
+                            android:textColorHint="@color/secondaryText"
+                            android:textSize="22sp"
+                            android:textColor="@color/primaryText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="IDR"
+                            android:fontFamily="@font/sfprodisplay_regular"
+                            android:textSize="16sp"
+                            android:textColor="@color/tertiaryText"/>
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="150dp"/>-->
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+<!--                <Button-->
+<!--                    android:id="@+id/btn_confirmUpdateData"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_save_transaction"-->
+<!--                    android:hint="Update"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="@font/sfprodisplay_bold"-->
+<!--                    android:textColorHint="@color/black"/>-->
+
+<!--        </LinearLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

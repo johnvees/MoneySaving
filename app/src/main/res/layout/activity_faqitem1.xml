@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/primaryBackground"
+    tools:context=".FAQItem1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_faqTitleItem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="FAQs"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="28sp"
+                android:textColor="@color/primaryText"/>
+
+            <ImageButton
+                android:id="@+id/btn_faqItem1ToFaq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_back"
+                android:backgroundTint="@color/primaryBackground"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/sfprodisplay_bold"
+                    android:text="Where i can see my balance?"
+                    android:textColor="@color/primaryText"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:text="You can just go to the My Wallet page which is located on the left of floating menu button at the bottom of your screen."
+                    android:textColor="@color/primaryText"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_faq1Floating"
+                        android:layout_width="150dp"
+                        android:layout_height="350dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/faq1_floating" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_faq1Floating"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:text="*See the red rectangle above"
+                        android:textColor="@color/outcome"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:text="And you can find your total balance, income, and outcome in IDR at the top of your screen."
+                    android:textColor="@color/primaryText"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/faq1_balance"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

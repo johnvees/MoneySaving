@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackground"
+    tools:context=".DetailHistory">
+
+    <LinearLayout
+        android:id="@+id/ll_parentDetailHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_detailHistoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:gravity="center_horizontal"
+                android:text="Detail Title"
+                android:textColor="@color/primaryText"
+                android:textSize="28sp" />
+
+            <ImageButton
+                android:id="@+id/btn_detailHistoryToHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_back"
+                android:backgroundTint="@color/primaryBackground"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_descHistoryDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Description"
+            android:fontFamily="@font/sfprodisplay_regular"
+            android:textSize="22sp"
+            android:textColor="@color/secondaryText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_amountHistoryDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="42sp"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="IDR"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textSize="18sp"
+                android:textColor="@color/tertiaryText"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details Below"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_chevron"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_detail_history"
+        android:layout_below="@id/ll_parentDetailHistory">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="22sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Category"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <TextView
+                android:id="@+id/tv_categoryDetailsBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Category Name"
+                android:textSize="22sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Description"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <TextView
+                android:id="@+id/tv_descDetailBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Description"
+                android:textSize="22sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Date"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <TextView
+                android:id="@+id/tv_dateDetailBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Date"
+                android:textSize="22sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/primaryText"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Amount"
+                android:textSize="20sp"
+                android:fontFamily="@font/sfprodisplay_regular"
+                android:textColor="@color/secondaryText"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_amountDetailBelow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:textColor="@color/primaryText"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:text="IDR"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/tertiaryText"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="2">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:paddingEnd="10dp">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_updateData"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_save_transaction"-->
+<!--                    android:hint="Update Data"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="@font/sfprodisplay_bold"-->
+<!--                    android:textColorHint="@color/black"/>-->
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:paddingStart="10dp">-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_deleteData"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/bg_delete_data"-->
+<!--                    android:hint="Delete Data"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:fontFamily="@font/sfprodisplay_bold"-->
+<!--                    android:textColorHint="@color/primaryText"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
